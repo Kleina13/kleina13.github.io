@@ -28,7 +28,7 @@ header h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 .sansSerif {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 .monotype {
     font-family: 'Courier New', Courier, monospace;
@@ -45,7 +45,90 @@ header h1 {
 .verk {
     font-family: Helvetica, Arial, sans-serif;
     font-style: italic;
+    color: cornflowerblue;
 }
 .blu {
     border-color: orange;
+}
+.smol {
+    font-size: 0.6em;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+.poster {
+    font-family: impact, charcoal, sans-serif;
+    font-size: 6em;
+    text-align: center;
+    background: cornflowerblue;
+}
+.poster:hover {
+    background: greenyellow;
+    stroke: black;
+}
+.purple {
+    color: purple;
+    font: bold;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+    color: cornflowerblue;
+}
+.rainbow {
+    -webkit-animation:rainbow .1s infinite;
+    -ms-animation:rainbow .5s infinite;
+    -o-animation:rainbow .5s infinite;
+    animation:rainbow .5s infinite;
+}
+    @-webkit-keyframes rainbow {
+    0% {background: #ff0000;}
+    10% {background: #ff8000;}
+    20% {background: #ffff00;}
+    30% {background: #80ff00;}
+    40% {background: #00ff00;}
+    50% {background: #00ff80;}
+    60% {background: #00ffff;}
+    70% {background: #0080ff;}
+    80% {background: #0000ff;}
+    90% {background: #8000ff;}
+    100% {background: #ff0080;}
+}
+    @-ms-keyframes rainbow {
+    0% {background: #ff0000;}
+    10% {background: #ff8000;}
+    20% {background: #ffff00;}
+    30% {background: #80ff00;}
+    40% {background: #00ff00;}
+    50% {background: #00ff80;}
+    60% {background: #00ffff;}
+    70% {background: #0080ff;}
+    80% {background: #0000ff;}
+    90% {background: #8000ff;}
+    100% {background: #ff0080;}
+}
+    @-o-keyframes rainbow {
+    0% {background: #ff0000;}
+    10% {background: #ff8000;}
+    20% {background: #ffff00;}
+    30% {background: #80ff00;}
+    40% {background: #00ff00;}
+    50% {background: #00ff80;}
+    60% {background: #00ffff;}
+    70% {background: #0080ff;}
+    80% {background: #0000ff;}
+    90% {background: #8000ff;}
+    100% {background: #ff0080;}
+}
+    @keyframes rainbow {
+    0% {background: #ff0000;}
+    10% {background: #ff8000;}
+    20% {background: #ffff00;}
+    30% {background: #80ff00;}
+    40% {background: #00ff00;}
+    50% {background: #00ff80;}
+    60% {background: #00ffff;}
+    70% {background: #0080ff;}
+    80% {background: #0000ff;}
+    90% {background: #8000ff;}
+    100% {background: #ff0080;}
 }
