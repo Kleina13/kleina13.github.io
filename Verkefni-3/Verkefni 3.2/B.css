@@ -1,25 +1,33 @@
 * {
     box-sizing: border-box;
-    border: 1px red;
-    font-family: 'Open Sans', sans-serif;
 }
-body {
+html, body {
     max-width: 60em;
-    margin: 0% auto;
-    border: solid red;
+    margin: auto;
+    border: solid blue;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "topnav"
+        "content"
+        "footer"
 }
 header {
-    border: 1px solid green;
+    border: 1px solid blue;
     text-align: center;
+    grid-area: header;
 }
 nav {
-    border: 1px solid yellow;
+    border: 1px solid blue;
 }
 main {
     border: 1px solid blue;
 }
 .topnav {
     background-color: brown;
+    grid-area: topnav;
 }
 .topmenu {
     display: flex;
@@ -28,6 +36,7 @@ main {
     margin: 0;
     padding: .5em 0;
     list-style-type: none;
+    
 }
 .topmenu a {
     text-decoration: none;
@@ -41,15 +50,29 @@ main {
     background-color: yellow;
     color: brown;
 }
+.topmenu a.virkur {
+    color: black;
+    background-color: yellow
+}
 .content {
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas: "midja haegri vinstri";
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "haegri vinstri midja";
+    grid-area: content;
 }
-/*
-dálkar í content
-*/
+footer {
+    grid-area: footer;
+}
+p h4 {
+    padding: 0.5em 1em;
+}
+h4 {
+    margin-bottom: 0;
+}
+p {
+    margin-top: 0;
+}
 .midja {
     grid-area: midja;
 }
@@ -58,122 +81,23 @@ dálkar í content
 }
 .haegri {
     grid-area: haegri;
+    background-color: yellow;
 }
 p {
     padding: 0 1em;
 }
-
-
-/*
-.col-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+#centerfade {
+    background-image: linear-gradient(blue, yellow, blue);
 }
-.col-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#refade {
+    background-image: repeating-linear-gradient(blue, yellow 10%, blue 20%);
 }
-.serif {
-    font-family: 'Times New Roman', Times, serif;
+#radialcirclefade {
+    background-image: radial-gradient(blue, yellow, blue);
 }
-.sansSerif {
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+#recirclefade {
+    background-image: repeating-radial-gradient(blue, yellow 10%, blue 15%);
 }
-.monotype {
-    font-family: 'Courier New', Courier, monospace;
+#altradialcirclefade {
+    background-image: radial-gradient(blue 5%, yellow 15%, blue 60%);
 }
-.trebuchet {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.helvetica {
-    font-family: Helvetica, sans-serif;
-}
-.verdana {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.verk {
-    font-family: Helvetica, Arial, sans-serif;
-    font-style: italic;
-    color: cornflowerblue;
-}
-.blu {
-    border-color: orange;
-}
-.smol {
-    font-size: 0.6em;
-    letter-spacing: 0.04em;
-    line-height: 1.6;
-}
-.poster {
-    font-family: impact, charcoal, sans-serif;
-    font-size: 6em;
-    text-align: center;
-    background: cornflowerblue;
-}
-.poster:hover {
-    background: greenyellow;
-    stroke: black;
-}
-.purple {
-    color: purple;
-    font: bold;
-}
-.rainbow {
-    -webkit-animation:rainbow .1s infinite;
-    -ms-animation:rainbow .5s infinite;
-    -o-animation:rainbow .5s infinite;
-    animation:rainbow .5s infinite;
-}
-    @-webkit-keyframes rainbow {
-    0% {background: #ff0000;}
-    10% {background: #ff8000;}
-    20% {background: #ffff00;}
-    30% {background: #80ff00;}
-    40% {background: #00ff00;}
-    50% {background: #00ff80;}
-    60% {background: #00ffff;}
-    70% {background: #0080ff;}
-    80% {background: #0000ff;}
-    90% {background: #8000ff;}
-    100% {background: #ff0080;}
-}
-    @-ms-keyframes rainbow {
-    0% {background: #ff0000;}
-    10% {background: #ff8000;}
-    20% {background: #ffff00;}
-    30% {background: #80ff00;}
-    40% {background: #00ff00;}
-    50% {background: #00ff80;}
-    60% {background: #00ffff;}
-    70% {background: #0080ff;}
-    80% {background: #0000ff;}
-    90% {background: #8000ff;}
-    100% {background: #ff0080;}
-}
-    @-o-keyframes rainbow {
-    0% {background: #ff0000;}
-    10% {background: #ff8000;}
-    20% {background: #ffff00;}
-    30% {background: #80ff00;}
-    40% {background: #00ff00;}
-    50% {background: #00ff80;}
-    60% {background: #00ffff;}
-    70% {background: #0080ff;}
-    80% {background: #0000ff;}
-    90% {background: #8000ff;}
-    100% {background: #ff0080;}
-}
-    @keyframes rainbow {
-    0% {background: #ff0000;}
-    10% {background: #ff8000;}
-    20% {background: #ffff00;}
-    30% {background: #80ff00;}
-    40% {background: #00ff00;}
-    50% {background: #00ff80;}
-    60% {background: #00ffff;}
-    70% {background: #0080ff;}
-    80% {background: #0000ff;}
-    90% {background: #8000ff;}
-    100% {background: #ff0080;}
-}
-*/
