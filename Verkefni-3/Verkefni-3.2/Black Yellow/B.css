@@ -77,8 +77,8 @@ main {
 .content {
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-areas: "haegri vinstri midja";
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-areas: "vinstri midja haegri";
     grid-area: content;
 }
 footer {
@@ -156,6 +156,9 @@ p {
     100%{color: yellow;}	
     100%{color: black;}	
 }
-.obnoxious{
+.obnoxious {
     color: yellow;
+}
+h2 {
+    text-align: center
 }
