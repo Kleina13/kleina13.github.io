@@ -85,16 +85,22 @@ blockquote{
     border-radius: 10px; 
 }
 .listi {
+	text-align: left;
 	grid-area: listi;
 	display: grid;
+}
+.listi h4 {
+	text-align: center
 }
 .innri {
 	grid-area: innri;
 	display: grid;
+	list-style-type: none;
 }
 .ytri {
 	grid-area: ytri;
 	display: grid;
+	list-style-type: none;
 }
 footer{
 	margin:0;
@@ -107,7 +113,7 @@ footer{
 	grid-template-areas: "listi, innri, ytri";
 	display: flex;
     flex-flow: row;
-    justify-content: space-around;
+	justify-content: space-around;
 }
 footer nav{
 	text-align: center;

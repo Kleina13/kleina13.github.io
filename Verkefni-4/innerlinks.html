@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/mace.css">
   </head>
-  <body id=" ">
+  <body>
     <header>
         <h1 class="fl-left col-1-2">
           Efnisyfirlit
@@ -21,17 +21,19 @@
         </nav>
     </header>
     <section>
-      <div id="brandarar">
-          <nav class=" "> 
-            <div> 
-               <a href="#læknisskoðun">Læknisskoðun</a><!--
-            --><a href="#óskir">Óskirnar 3</a><!--
-            --><a href="#adam">Adam</a><!--
-            --><a href="#aids">Alnæmisfaraldurinn</a><!--
-            --><a href="#jola">Jólakveðja</a><!--
-            --><a href="#gefoss">Gef oss í dag vort daglegt ... </a>
+      <div>
+
+          <nav> 
+            <div>
+            <a href="#læknisskoðun">Læknisskoðun</a><!--
+         --><a href="#óskir">Óskirnar 3</a><!--
+         --><a href="#adam">Adam</a><!--
+         --><a href="#aids">Alnæmisfaraldurinn</a><!--
+         --><a href="#jola">Jólakveðja</a><!--
+         --><a href="#gefoss">Gef oss í dag vort daglegt ... </a>
             </div>
-          </nav> 
+          </nav>
+
           <h1>Innri og ytri tenglar</h1>
           <p>Í footer tagið á að setja upplýsignar um þig í DD lista og nokkra tengla í UL lista sem vísa á önnur verkefni og aðrar vefsíður. Vefsíðurnar eiga að birtast í nýjum glugga í vafranum (notið <i>target:_blank</i>)</p>
           <h1>Innra efnisyfirlit</h1>
@@ -39,7 +41,7 @@
           <h1>Ákveðin staðsetning</h1>
           <p>Hvernig á að setja einn tengil á vefsíðuna sem er með fastri staðsetningu neðst á skjánum og  vísar <br> "efst á síðu"?</p>
       </div>
-      <div>
+      <div id="brandarar">
         <div id="brandarar">
           <h3 id="Læknisskoðun">Læknisskoðun </h3>
           <p>90 ára gamall maður var í árlegri læknisskoðun og læknirinn spurði hann hvernig hann hefði það.
@@ -150,14 +152,23 @@
         <h4>Listar DD og UL </h4>
         <dl> <!--Description list -->
           <dt>Nafn</dt>
-            <dd> </dd>
+            <dd>Ragnar Helgi Breiðfjörð Unnþórsson </dd>
+          <dt>Tölvupóstur</dt>
+            <dd>ragnar@kormakur.is </dd>
+          <dt>Áfangi og braut</dt>
+            <dd>VEFÞ1VG05AU Vefhönnun 1 | Tölvubraut </dd>
+          <dt>Skóli</dt>
+            <dd>Tækniskólinn </dd>
         </dl>
       </nav>
       <nav class="innri">
         <h4>Innri tenglar <em>(relative links)</em></h4>
         <ul>
-          <li><a href=" ">Forsíða</a></li>
-          <li><a href=" ">Verkefni 1</a></li></li>
+          <li><a target="_blank" href="index.html">Forsíða</a></li>
+          <li><a target="_blank" href="../Verkefni-1/index.html">Verkefni 1</a></li>
+          <li><a target="_blank" href="../Verkefni-2/verkefni-2.html">Verkefni 2</a></li>
+          <li><a target="_blank" href="../Verkefni-3/Verkefni-3.1/index.html">Verkefni 3.1</a></li>
+          <li><a target="_blank" href="../Verkefni-3/Verkefni-3.2/indexB.html">Verkefni 3.2</a></li>
         </ul>
       </nav>
       <nav class="ytri">
