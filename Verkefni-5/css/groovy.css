@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+}
+img {
+	max-width: 100%;
+    height: auto;
+    overflow: auto;
+}
+header {
+    display: flex;
+    padding: 1em;
+}
+h1 {
+	font-weight: normal;
+	font-size: 4em;
+	margin-top: 0;
+	padding-top: 15px;
+}
+.sickle{
+    float: left;
+    height: 80px;
+    width: 90px;
+}
+.head-box {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
