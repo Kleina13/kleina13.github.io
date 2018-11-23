@@ -7,10 +7,16 @@ html {
 body {
     width: 100%;
     margin-top: 20%;
-    background-color: #DA251C
+    background-color: #5257FF;
+    font-family: sans-serif;
 }
-section {
-    
+main {
+    display: grid;
+	grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hver"
+    "feril"
+    "samband";
 }
 img {
 	max-width: 100%;
@@ -21,8 +27,8 @@ img {
     border-radius: 50%;
     float: left;
     padding: 15px;
-    width: 30%;
-    height: 30%;
+    width: 280px;
+    height: 280px;
 }
 .ferilskra {
     float: left;
@@ -30,15 +36,22 @@ img {
     width: 250px;
     height: 250px;
 }
+.loftorka {
+    float: left;
+    padding: 15px;
+    width: 350px;
+    height: 250px;
+}
 header {
     display: flex;
     text-align: center;
-    background-color: gold
+    background-color: #FFDE52
 }
 h1 {
 	font-weight: normal;
 	font-size: 4em;
-	margin-top: 0;
+    margin-top: 0;
+    font-family: 'Allerta Stencil', sans-serif;
 }
 p {
     padding: 15px;
@@ -55,7 +68,7 @@ p {
 }
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #FFDE52;
     position: fixed; 
     top: 0; 
     width: 100%;
@@ -63,12 +76,39 @@ p {
 .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 .navbar a:hover {
-    background: #ddd;
-    color: black;
+    background: #B29416;
+    color: white;
+}
+#hver {
+    grid-area: hver;
+}
+#feril {
+    grid-area: feril;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "vinnuskoli"
+    "skatar"
+    "loftorka";
+}
+#vinnuskoli {
+    grid-area: vinnuskoli;
+}
+#skatar {
+    grid-area: skatar; 
+}
+#loftorka {
+    grid-area: loftorka;
+}
+#samband {
+    grid-area: samband;
+}
+#blue {
+    background: rgb(40,44,178);
+    background: linear-gradient(0deg, rgba(40,44,178,1) 0%, rgba(82,87,255,1) 100%);
 }
