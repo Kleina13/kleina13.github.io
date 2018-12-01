@@ -96,6 +96,16 @@ p {
     "skatar"
     "loftorka";
 }
+article {
+    float: left;
+    padding: 8px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: #282CB2 solid 5px;
+    background-color: #5257FF;
+}
 #vinnuskoli {
     grid-area: vinnuskoli;
 }
@@ -108,7 +118,7 @@ p {
 #samband {
     grid-area: samband;
 }
-#blue {
+#bluefade {
     background: rgb(40,44,178);
     background: linear-gradient(0deg, rgba(40,44,178,1) 0%, rgba(82,87,255,1) 100%);
 }
