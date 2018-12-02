@@ -23,6 +23,32 @@ img {
     height: auto;
     overflow: auto;
 }
+hr {
+    color: #FFDE52;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #FFDE52;
+    margin: 2em 4% 0em 4%;
+    padding: 0; 
+}
+blockquote {
+    padding: 8px;
+    border: #282CB2 solid 5px;
+    background-color: #5257FF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/trianglify1.svg)
+}
+.maintext {
+    text-align: center;
+    margin: 5% 0% 3.5% 0;
+}
+.phone {
+    height: 200px;
+    width: 200px;
+    float: left;
+}
 .profilepic {
     border-radius: 50%;
     float: left;
@@ -45,7 +71,8 @@ img {
 header {
     display: flex;
     text-align: center;
-    background-color: #FFDE52
+    background-color: #FFDE52;
+    border-bottom: #B29416 solid 3px;
 }
 h1 {
 	font-weight: normal;
@@ -72,6 +99,7 @@ p {
     position: fixed; 
     top: 0; 
     width: 100%;
+    border-bottom: #B29416 solid 3px;
 }
 .navbar a {
     float: left;
@@ -87,6 +115,7 @@ p {
 }
 #hver {
     grid-area: hver;
+    margin-top: 2em;
 }
 #feril {
     grid-area: feril;
@@ -105,15 +134,27 @@ article {
     margin-bottom: 5%;
     border: #282CB2 solid 5px;
     background-color: #5257FF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #vinnuskoli {
     grid-area: vinnuskoli;
 }
+.vinnuskoli {
+    background-image: url(../img/trianglify1.svg);
+}
 #skatar {
     grid-area: skatar; 
 }
+.skatar {
+    background-image: url(../img/trianglify2.svg);
+}
 #loftorka {
     grid-area: loftorka;
+}
+.loftorkaimg {
+    background-image: url(../img/trianglify3.svg);
 }
 #samband {
     grid-area: samband;
@@ -121,4 +162,9 @@ article {
 #bluefade {
     background: rgb(40,44,178);
     background: linear-gradient(0deg, rgba(40,44,178,1) 0%, rgba(82,87,255,1) 100%);
+}
+#bluebackground {
+    background-image: url(../img/trianglify.svg);
+    background-repeat: no-repeat; 
+    background-position: cover;
 }
