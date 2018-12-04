@@ -6,8 +6,8 @@ html {
 }
 body {
     width: 100%;
-    margin-top: 20%;
-    background-color: #5257FF;
+    margin-top: 8.5%;
+    background-color: #FF2A19;
     font-family: sans-serif;
 }
 main {
@@ -24,17 +24,17 @@ img {
     overflow: auto;
 }
 hr {
-    color: #FFDE52;
+    color: #FF2A19;
     height: 1px;
     border: 0px;
-    border-top: 1px solid #FFDE52;
+    border-top: 1px solid #FF2A19;
     margin: 2em 4% 0em 4%;
     padding: 0; 
 }
 blockquote {
     padding: 8px;
-    border: #282CB2 solid 5px;
-    background-color: #5257FF;
+    border: #7F150C solid 5px;
+    background-color: #FF2A19;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,8 +71,7 @@ blockquote {
 header {
     display: flex;
     text-align: center;
-    background-color: #FFDE52;
-    border-bottom: #B29416 solid 3px;
+    border-bottom: #7F3833 solid 3px;
 }
 h1 {
 	font-weight: normal;
@@ -83,9 +82,9 @@ h1 {
 p {
     padding: 15px;
 }
-.sickle {
+.fleur {
     float: left;
-    height: 80px;
+    height: 90px;
     width: 90px;
 }
 .head-box {
@@ -95,11 +94,11 @@ p {
 }
 .navbar {
     overflow: hidden;
-    background-color: #FFDE52;
+    background-color: #FF2A19;
     position: fixed; 
     top: 0; 
     width: 100%;
-    border-bottom: #B29416 solid 3px;
+    border-bottom: #7F3833 solid 3px;
 }
 .navbar a {
     float: left;
@@ -110,7 +109,7 @@ p {
     text-decoration: none;
 }
 .navbar a:hover {
-    background: #B29416;
+    background: #7F3833;
     color: white;
 }
 #hver {
@@ -132,8 +131,8 @@ article {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    border: #282CB2 solid 5px;
-    background-color: #5257FF;
+    border: #7F150C solid 5px;
+    background-color: #FF2A19;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -160,8 +159,8 @@ article {
     grid-area: samband;
 }
 #bluefade {
-    background: rgb(40,44,178);
-    background: linear-gradient(0deg, rgba(40,44,178,1) 0%, rgba(82,87,255,1) 100%);
+    background: #FF2A19;
+    background: linear-gradient(0deg, #FF2A19 5%, white 100%);
 }
 #bluebackground {
     background-image: url(../img/trianglify.svg);
