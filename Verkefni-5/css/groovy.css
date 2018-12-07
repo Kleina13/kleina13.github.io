@@ -71,7 +71,7 @@ blockquote {
 header {
     display: flex;
     text-align: center;
-    border-bottom: #7F3833 solid 3px;
+    border-bottom: #7F150C solid 3px;
 }
 h1 {
 	font-weight: normal;
@@ -83,7 +83,7 @@ p {
     padding: 15px;
 }
 .fleur {
-    float: left;
+    float: none;
     height: 90px;
     width: 90px;
 }
@@ -98,7 +98,7 @@ p {
     position: fixed; 
     top: 0; 
     width: 100%;
-    border-bottom: #7F3833 solid 3px;
+    border-bottom: #7F150C solid 3px;
 }
 .navbar a {
     float: left;
@@ -109,7 +109,7 @@ p {
     text-decoration: none;
 }
 .navbar a:hover {
-    background: #7F3833;
+    background: #7F150C;
     color: white;
 }
 #hver {
@@ -166,4 +166,24 @@ article {
     background-image: url(../img/trianglify.svg);
     background-repeat: no-repeat; 
     background-position: cover;
+}
+@media screen and (max-width: 900px) {
+    body {
+        margin-top: 35%;
+    }
+    .navbar {
+        position: absolute;
+    }
+    .profilepic {
+        float: none;
+    }
+    .phone {
+        float: none;
+    }
+    .fleur {
+        float: none;
+    }
+    header {
+        margin-top: 10em;
+    }
 }
