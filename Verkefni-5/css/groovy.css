@@ -78,12 +78,13 @@ h1 {
 	font-size: 4em;
     margin-top: 0;
     font-family: 'Allerta Stencil', sans-serif;
+    color: #F0F0F0;
 }
 p {
     padding: 15px;
 }
 .fleur {
-    float: none;
+    float: left;
     height: 90px;
     width: 90px;
 }
@@ -91,6 +92,7 @@ p {
     float: left;
     width: 50%;
     padding: 30px;
+    margin-left: 10%; 
 }
 .navbar {
     overflow: hidden;
@@ -162,6 +164,9 @@ article {
     background: #FF2A19;
     background: linear-gradient(0deg, #FF2A19 5%, white 100%);
 }
+#white {
+    background-color: #F0F0F0;
+}
 #bluebackground {
     background-image: url(../img/trianglify.svg);
     background-repeat: no-repeat; 
@@ -175,15 +180,33 @@ article {
         position: absolute;
     }
     .profilepic {
+        display: block;
         float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     .phone {
+        display: block;
         float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     .fleur {
+        display: block;
         float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ferilskra {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     header {
         margin-top: 10em;
+    }
+    h2 {
+        text-align: center;
     }
 }
