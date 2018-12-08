@@ -169,8 +169,9 @@ article {
 }
 #bluebackground {
     background-image: url(../img/trianglify.svg);
-    background-repeat: no-repeat; 
-    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 @media screen and (max-width: 900px) {
     body {
@@ -178,6 +179,12 @@ article {
     }
     .navbar {
         position: absolute;
+    }
+    .loftorka {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
     }
     .profilepic {
         display: block;
