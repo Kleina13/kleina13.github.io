@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+h1 {
+    border: 3px solid purple;
+    display: block;
+}
+.box {
+    padding: 2em solid hotpink;
+    border: 6px solid salmon;
+    margin-top: 1em;
+    color: crimson;
+}
+.cream {
+    border: 5px solid #FAEBD7;
+    padding: 1em;
+    color: blueviolet;
+    margin: 1em;
+}
+li {
+    border: red;
+    padding: 1em;
+    margin: 1em;
+}
+.inline li {
+    display: inline;
+    border: 3px dashed green;
+    color: yellowgreen;
+}
+.inlineblock li {
+    display: inline-block;
+    border: 3px dashed magenta;
+}
+.box-3 {
+    width: 33.33%;
+    border: 1px solid;
+    padding: 1em;
+}
+.box-2 {
+    width: 50%;
+    border: 1px solid;
+    padding: 1em;
+}
+.row div{
+    float: left;
+}
+h4 {
+    text-align: center;
+}
+div {
+    display: block;
+}

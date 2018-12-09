@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+body {
+background: linear-gradient(270deg, green, red);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 1s ease infinite;
+-moz-animation: AnimationName 1s ease infinite;
+-o-animation: AnimationName 1s ease infinite;
+animation: AnimationName 1s ease infinite;
+
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+html, body {
+    max-width: 60em;
+    margin: auto;
+    border: solid green;
+    font-family: 'Lobster', cursive;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "topnav"
+        "content"
+        "footer"
+}
+header {
+    border: 1px solid green;
+    text-align: center;
+    grid-area: header;
+}
+nav {
+    border: 1px solid green;
+}
+main {
+    border: 1px solid green;
+}
+.topnav {
+    background-color: green;
+    grid-area: topnav;
+}
+.topmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: .5em 0;
+    list-style-type: none;
+}
+.topmenu a {
+    text-decoration: none;
+    padding: .5em;
+}
+.topmenu a.virkur {
+    background-color: red
+}
+.content {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "haegri vinstri midja";
+    grid-area: content;
+}
+footer {
+    grid-area: footer;
+}
+p h4 {
+    padding: 0.5em 1em;
+}
+h4 {
+    margin-bottom: 0;
+}
+p {
+    margin-top: 0;
+}
+.midja {
+    grid-area: midja;
+}
+.vinstri {
+    grid-area: vinstri;
+}
+.haegri {
+    grid-area: haegri;
+    background-color: red;
+}
+p {
+    padding: 0 1em;
+}
+#centerfade {
+    background-image: linear-gradient(green, red, green);
+}
+#refade {
+    background-image: repeating-linear-gradient(green, red 10%, green 20%);
+}
+#radialcirclefade {
+    background-image: radial-gradient(green, red, green);
+}
+#recirclefade {
+    background-image: repeating-radial-gradient(green, red 10%, green 15%);
+}
+#altradialcirclefade {
+    background-image: radial-gradient(green 5%, red 15%, green 60%);
+}
+.button {
+    padding: 45px 96px;
+    text-align: center;
+    display: inline-block;
+    font-size: 22px;
+}
+.obnoxious {
+    color: red;
+
+    /* Chrome, Safari, Opera */
+    -webkit-animation: obnoxious .2s infinite;
+   
+   /* Internet Explorer */
+    -ms-animation: obnoxious .2s infinite;
+   
+  /* Standar Syntax */
+    animation: obnoxious .2s infinite; 
+}
+ 
+ /* Chrome, Safari, Opera */
+@-webkit-keyframes obnoxious{
+    100%{color: red;} 	
+    100%{color: green;}
+}
+ /* Internet Explorer */
+@-ms-keyframes obnoxious{
+    100%{color: red;}	
+    100%{color: green;}	
+}
+ 
+ /* Standar Syntax */
+@keyframes obnoxious{
+    100%{color: red;}	
+    100%{color: green;}	
+}
+.obnoxious{
+    color: red;
+}
+h2 {
+    text-align: center
+}
