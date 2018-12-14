@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Questrial');
 * {
     box-sizing: border-box;
-
 }
 html {
     scroll-behavior: smooth;
@@ -104,6 +103,7 @@ p {
     width: 100%;
     border-top: #B6160C solid 4px;
     box-shadow: 0px 3px 50px black;
+    z-index:999999;
 }
 .navbar div{
     display: flex;
@@ -139,15 +139,15 @@ p {
     text-decoration: none;
     width: 33%;
     display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 .navbar a:before {
   content: "";
@@ -279,6 +279,19 @@ blockquote h2{
     background-repeat: no-repeat;
     background-position: center center;
 }
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 @media screen and (max-width: 900px) {
     body {
         margin-top: 35%;
@@ -333,7 +346,10 @@ blockquote h2{
     h2 {
         text-align: center;
     }
-    section{
+    section {
         background-color: #F0F0F0;
+    }
+    .iframe-mobile {
+        height: 100%;
     }
 }
