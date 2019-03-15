@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Questrial');
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    margin-top: 60px;
+    background-color: #FF2A19;
+    font-family: sans-serif;
+}
+main {
+    display: grid;
+	grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hver"
+    "feril"
+    "samband";
+    max-width: 1100px;
+    margin: auto;
+}
+img {
+	max-width: 100%;
+    height: auto;
+    overflow: auto;
+}
+hr {
+    color: #FF2A19;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #FF2A19;
+    margin: 2em 4% 0em 4%;
+    padding: 0; 
+}
+blockquote {
+    padding: 8px;
+    border: #7F150C solid 5px;
+    background-color: #FF2A19;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/trianglify1.svg)
+}
+.maintext {
+    padding-top: 30px;
+    text-align: center;
+    margin: 5% 0% 3.5% 0;
+}
+.phone {
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+.profilepic {
+    border-radius: 50%;
+    float: left;
+    padding: 15px;
+    width: 280px;
+    height: 280px;
+}
+.ferilskra {
+    float: left;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+}
+.loftorka {
+    float: left;
+    padding: 15px;
+    width: 280px;
+    height: 280px;
+}
+header {
+    display: flex;
+    text-align: left;
+}
+h1 {
+	font-weight: normal;
+    margin-top: 0;
+    font-family: 'Questrial', sans-serif;
+    color: #F0F0F0;
+}
+p {
+    padding: 15px;
+}
+.fleur {
+    height: 200px;
+    width: 400px;
+    float: left;
+}
+.fleur2 {
+    height: 195px;
+    width: 600px;
+}
+.navbar {
+    background-color: #dc2b1b;
+    color:white;
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    border-top: #B6160C solid 4px;
+    box-shadow: 0px 3px 50px black;
+    z-index:999999;
+}
+.navbar div{
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin: auto;
+}
+.undernav{
+    background-color: #dc2b1b;
+    color:white;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 60px;
+}
+.undernav a{
+    display: inline-block;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.undernav a:hover{
+    background-color: #B6160C; 
+}
+.navbar a{
+    display: block;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.navbar a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  border-radius: 20px;
+  background: #B6160C;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+  color: white;
+}
+.navbar a:hover:before, .navbar a:focus:before, .navbar a:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  background: #B6160C;
+}
+#hver {
+    grid-area: hver;
+    margin-top: 2em;
+}
+#feril {
+    grid-area: feril;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "vinnuskoli"
+    "skatar"
+    "loftorka";
+}
+section h2{
+    font-weight: normal;
+    font-size: 2.5em;
+    color: red;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 0px;
+}
+section p{
+    margin-top: 0px; 
+}
+article {
+    float: left;
+    padding: 8px;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: rgba(0,0,0,0.1) solid 7px;
+    border-radius: 20px;
+    background-color: #FF2A19;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: border 0.3s; /* Safari */
+    transition: border 0.3s;
+    color: white;
+    font-family: 'Roboto';
+    line-height: 1.6em;
+}
+article h3{
+    font-weight: normal;
+    padding-top: 20px;
+    font-size: 1.8em;
+    margin: 0;
+}
+article h4{
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+article:hover{
+    border: rgba(255,255,255,0.3) solid 7px;
+    -webkit-transition: border 0.3s; /* Safari */
+    transition: border 0.3s;
+}
+blockquote h2{
+    color: white
+}
+.luxury{
+    letter-spacing: 0.3em;
+}
+#vinnuskoli {
+    grid-area: vinnuskoli;
+}
+.vinnuskoli {
+    background-image: url(../img/trianglify1.svg);
+}
+#skatar {
+    grid-area: skatar; 
+}
+.skatar {
+    background-image: url(../img/trianglify2.svg);
+}
+#loftorka {
+    grid-area: loftorka;
+}
+.loftorkaimg {
+    background-image: url(../img/trianglify3.svg);
+}
+#samband {
+    grid-area: samband;
+}
+#bluefade {
+    background: #FF2A19;
+    background: linear-gradient(0deg, #FF2A19 5%, white 100%);
+}
+#white {
+    background-color: #F0F0F0;
+}
+#bluebackground {
+    background-image: url(../img/trianglify.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+@media screen and (max-width: 900px) {
+    body {
+        margin-top: 35%;
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    .loftorka {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profilepic {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .phone {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fleur {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin: auto;
+    }
+    .ferilskra {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .undernav a{
+        display: block;
+        color: white;
+        font-family: 'Questrial', sans-serif;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    header {
+        margin-top: 10em;
+    }
+    h2 {
+        text-align: center;
+    }
+    section {
+        background-color: #F0F0F0;
+    }
+    .iframe-mobile {
+        height: 100%;
+    }
+}

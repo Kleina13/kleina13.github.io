@@ -1,0 +1,301 @@
+$colors: (
+    main: #FF2A19,
+    sec: #7F150C,
+    third: #dc2b1b,
+    fourth: #B6160C
+);
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+$body-bg: transparent;
+$imagePath: "../assets/images";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Questrial');
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+html {
+    scroll-behavior: smooth;
+    background: url(#{$imagePath}/trianglify.svg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body, html {
+    height: 100%;
+}
+body {
+  width: 100%;
+  margin-top: 60px;
+  background-color: color(main);
+  font-family: sans-serif;
+  background: url(#{$imagePath}/trianglify.svg) repeat-x fixed 0 0;
+
+  #white {
+    background-color: #F0F0F0;
+    width: 100%;
+    padding: 7px;
+  }
+}
+.logo {
+    height: 200px;
+    width: 200px;
+    margin-left: 10%;
+    margin-right: auto;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hver"
+    "feril"
+    "samband";
+    max-width: 1100px;
+    margin: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    overflow: auto;
+}
+hr {
+    color: color(main);
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid color(main);
+    margin: 2em 4% 0em 4%;
+    padding: 0; 
+}
+blockquote {
+  padding: 8px;
+  border: color(sec) solid 5px;
+  background-color: color(main);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(#{$imagePath}/tri1.svg)
+}
+.maintext {
+  padding-top: 30px;
+  text-align: center;
+  margin: 5% 0% 3.5% 0;
+}
+header {
+    display: flex;
+    text-align: left;
+}
+h1 {
+    font-weight: normal;
+    margin-top: 0;
+    font-family: 'Questrial', sans-serif;
+}
+p {
+    padding: 15px;
+}
+.navbar {
+    background-color: color(third);
+    color:white;
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    border-top: color(fourth) solid 4px;
+    box-shadow: 0px 3px 50px black;
+    z-index: 999999;
+}
+.navbar div{
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin: auto;
+}
+.undernav{
+    background-color: color(third);
+    color:white;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 60px;
+}
+.undernav a{
+    display: inline-block;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.undernav a:hover{
+    background-color: color(fourth); 
+}
+.navbar a{
+    display: block;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.navbar a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  border-radius: 20px;
+  background: color(fourth);
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+  color: white;
+}
+.navbar a:hover:before, .navbar a:focus:before, .navbar a:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  background: color(fourth);
+}
+section h2{
+    font-weight: normal;
+    font-size: 2.5em;
+    color: red;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 0px;
+}
+section p{
+    margin-top: 0px; 
+}
+article {
+    float: left;
+    padding: 8px;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: rgba(0,0,0,0.1) solid 7px;
+    border-radius: 20px;
+    background-color: color(main);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: border 0.3s; /* Safari */
+    transition: border 0.3s;
+    color: white;
+    font-family: 'Roboto';
+    line-height: 1.6em;
+}
+article h3{
+    font-weight: normal;
+    padding-top: 20px;
+    font-size: 1.8em;
+    margin: 0;
+}
+article h4{
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+article:hover{
+    border: rgba(255,255,255,0.3) solid 7px;
+    -webkit-transition: border 0.3s; /* Safari */
+    transition: border 0.3s;
+}
+blockquote h2{
+    color: white
+}
+.luxury{
+    letter-spacing: 0.3em;
+}
+.tri1 {
+    background-image: url(#{$imagePath}/trianglify1.svg);
+}
+.tri2 {
+    background-image: url(#{$imagePath}/trianglify2.svg);
+}
+.tri3 {
+    background-image: url(#{$imagePath}/trianglify3.svg);
+}
+#samband {
+    grid-area: samband;
+}
+#bluefade {
+    background: color(main);
+    background: linear-gradient(0deg, color(main) 5%, white 100%);
+}
+
+#bluebackground {
+    background-image: url(../assets/images/trianglify.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+@media screen and (max-width: 900px) {
+    body {
+        margin-top: 35%;
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    .undernav a{
+        display: block;
+        color: white;
+        font-family: 'Questrial', sans-serif;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    header {
+        margin-top: 10em;
+    }
+    h2 {
+        text-align: center;
+    }
+    section {
+        background-color: #F0F0F0;
+    }
+    .iframe-mobile {
+        height: 100%;
+    }
+}
