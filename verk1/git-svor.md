@@ -1,5 +1,5 @@
 ---
-layout: gitsvor
+layout: default
 title: Gitsvör
 ---
 # Git Verkefni 1
