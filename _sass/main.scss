@@ -11,14 +11,13 @@ $body-bg: transparent;
 $imagePath: "../images";
 @import url('https://fonts.googleapis.com/css?family=Roboto|Questrial');
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 html {
     scroll-behavior: smooth;
-    background: url("#{$imagePath}/trianglify.svg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,17 +28,17 @@ body, html {
     margin: 0;
 }
 body {
-  width: 100%;
-  margin-top: 60px;
-  background-color: color(main);
-  font-family: sans-serif;
-  background: url("#{$imagePath}/trianglify.svg") repeat-x fixed 0 0;
-
-  #white {
-    background-color: #F0F0F0;
     width: 100%;
-    padding: 7px;
-  }
+    margin-top: 60px;
+    background-color: color(main);
+    font-family: sans-serif;
+    background: url("#{$imagePath}/trianglify.svg") repeat-x fixed 0 0;
+
+    #white {
+        background-color: #F0F0F0;
+        width: 100%;
+        padding: 7px;
+    }
 }
 .logo {
     height: 200px;
@@ -246,11 +245,12 @@ blockquote h2{
     background: linear-gradient(0deg, color(main) 5%, white 100%);
 }
 
-#bluebackground {
-    background-image: url(../assets/images/trianglify.svg);
+#background {
+    background: url("#{$imagePath}/trianglify.svg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 .resp-container {
     position: relative;
@@ -293,71 +293,11 @@ blockquote h2{
     .iframe-mobile {
         height: 100%;
     }
-    .navbar {
-        background-color: color(third);
-        color:white;
-        text-align: center;
-        position: fixed; 
-        top: 0; 
-        width: 100%;
-        border-top: color(fourth) solid 4px;
-        box-shadow: 0px 3px 50px black;
-        z-index: 999999;
-    }
-    .navbar div{
-        display: flex;
-        flex-direction: row;
-        max-width: 1100px;
-        margin: auto;
-    }
-    .navbar a{
-        display: block;
-        color: white;
-        font-family: 'Questrial', sans-serif;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        width: 33%;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        position: relative;
-        -webkit-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-    }
-    .navbar a:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -50px;
-      left: 0;
-      right: 0;
-      bottom: -30px;
-      border-radius: 20px;
-      background: color(fourth);
-      -webkit-transform: scaleY(0);
-      transform: scaleY(0);
-      -webkit-transform-origin: 50% 0;
-      transform-origin: 50% 0;
-      -webkit-transition-property: transform;
-      transition-property: transform;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      -webkit-transition-timing-function: ease-out;
-      transition-timing-function: ease-out;
-    }
-    .navbar a:hover, .navbar a:focus, .navbar a:active {
-      color: white;
-    }
-    .navbar a:hover:before, .navbar a:focus:before, .navbar a:active:before {
-      -webkit-transform: scaleY(1);
-      transform: scaleY(1);
-      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-      background: color(fourth);
-    }
+    
 }
+
+@keyframes spin {
+    0% { rotate: 0deg }
+    100% { rotate: 360deg }
+}
+/* animation: spin 3s linear infinite alternate; */
