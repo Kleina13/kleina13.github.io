@@ -297,8 +297,8 @@ blockquote h2{
 }
 
 @keyframes spin {
-    0% { rotate: 0deg }
-    100% { rotate: 360deg }
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
 }
 /* animation: spin 3s linear infinite alternate; */
 
