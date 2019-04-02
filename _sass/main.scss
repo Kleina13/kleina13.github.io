@@ -310,6 +310,21 @@ blockquote h2{
     animation-direction: alternate;
 }
 .adwrapper {
-    height: 250px;
-    width: 200px;
+    margin-top: 5px;
+    height: 125px;
+    width: 100%;
+    border: 2px solid color(fourth);
+    box-shadow: inset 0 0 10px #000000;
+    margin-bottom: 50em;
+    overflow: hidden;
+}
+.longboi {
+    background: url("#{$imagePath}/lobster.png") repeat-x;
+    background-size: 20em;
+    height: 100%;
+    animation: lobster 3s infinite 0s linear;
+}
+@keyframes lobster {
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-50px);}
 }
