@@ -313,18 +313,89 @@ blockquote h2{
     margin-top: 5px;
     height: 125px;
     width: 100%;
-    border: 2px solid color(fourth);
+    border: 3px solid color(main);
+    border-radius: 3px; 
     box-shadow: inset 0 0 10px #000000;
-    margin-bottom: 50em;
+    margin-bottom: 25em;
     overflow: hidden;
+    background: linear-gradient(296deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f, #ff0000);
+    background-size: 2600% 2600%;
+    animation: rainbow_B 15s ease infinite;
+
+    .longboi {
+        background: url("#{$imagePath}/lobster.png") repeat-x;
+        background-size: 375px 125px; 
+        height: 100%;
+        animation: lobster 7.5s infinite 0s linear;
+        text-align: center;
+        font-family: 'Dokdo', cursive;
+
+        p {
+            padding: 0;
+            margin: 0;
+            color: white;
+            font-size: 20px;
+            animation: howhedoit 2s infinite 0s linear;
+        }
+
+        a {
+            background-color: #eeff00;
+            color: color(main);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 7px;
+            border: color(main) solid 3px;
+            animation: adbutton 1s infinite 0s linear;
+        }
+
+        a:hover {
+            background-color: #00ffff;
+            border-color: #007fff;
+            color: #007fff;
+            font-size: 20px;
+            animation: adbutton_hover 1s infinite 0s linear
+        }
+    }
 }
-.longboi {
-    background: url("#{$imagePath}/lobster.png") repeat-x;
-    background-size: 20em;
-    height: 100%;
-    animation: lobster 3s infinite 0s linear;
+@keyframes howhedoit {
+    0%  {transform: skewX(25deg) skewY(1deg);}
+    50% {transform: skewX(-25deg) skewY(-1deg);}
+    100%{transform: skewX(25deg) skewY(1deg);}
 }
 @keyframes lobster {
-    0%{transform: translateX(0px);}
-    100%{transform: translateX(-50px);}
+    0%  {background-position: 0 0;}
+    100%{background-position: 750px 0;}
+}
+@keyframes adbutton {
+    0%  {background: #eeff00; font-size: 20px;}
+    50% {background: #e7d321; font-size: 24px;}
+    100%{background: #eeff00; font-size: 20px;}
+}
+@keyframes adbutton_hover {
+    0%  {background-color: #00ffff; font-size: 20px;}
+    50% {background-color: #00ff00; font-size: 24px;}
+    100%{background-color: #00ffff; font-size: 20px;}
+}
+@keyframes rainbow_A {
+    0%  {background-color: #ff0000;}
+    8%  {background-color: #ff7f00;}
+    16% {background-color: #ffff00;}
+    25% {background-color: #7fff00;}
+    33% {background-color: #00ff00;}
+    41% {background-color: #00ff7f;}
+    50% {background-color: #00ffff;}
+    58% {background-color: #007fff;}
+    66% {background-color: #0000ff;}
+    75% {background-color: #7f00ff;}
+    83% {background-color: #ff00ff;}
+    91% {background-color: #ff007f;}
+    100%{background-color: #ff0000;}
+}
+@keyframes rainbow_B {
+    0%  {background-position:0% 51%}
+    50% {background-position:100% 50%}
+    100%{background-position:0% 51%}
 }
