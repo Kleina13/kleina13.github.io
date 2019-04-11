@@ -97,7 +97,7 @@ p {
     top: 0; 
     width: 100%;
     border-top: color(fourth) solid 4px;
-    box-shadow: 0px 3px 50px black;
+    box-shadow: 0px 3px 50px #000000;
     z-index: 999999;
 }
 .navbar div{
@@ -358,6 +358,21 @@ blockquote h2{
             font-size: 20px;
             animation: adbutton_hover 1s infinite 0s linear
         }
+    }
+}
+form {
+    border: color(main) solid 2px;
+    border-radius: 2px;
+    
+
+    input {
+        border-radius: 2px;
+        border: color(main) solid 2px;
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
     }
 }
 @keyframes howhedoit {
