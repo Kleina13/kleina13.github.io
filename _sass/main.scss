@@ -1,8 +1,14 @@
 $colors: (
     main: #FF2A19,
+    alt: complement(main),
     sec: #7F150C,
     third: #dc2b1b,
-    fourth: #B6160C
+    fourth: #B6160C,
+    adcolor: #eeff00,
+    adcolorsec: #ff0000,
+    adhover: #00ffff,
+    adhoversec: #007fff,
+    bg_white: #f0f0f0
 );
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -35,7 +41,7 @@ body {
     background: url("#{$imagePath}/trianglify.svg") repeat-x fixed 0 0;
 
     #white {
-        background-color: #F0F0F0;
+        background-color: color(bg_white);
         width: 100%;
         padding: 7px;
     }
@@ -288,26 +294,19 @@ blockquote h2{
         text-align: center;
     }
     section {
-        background-color: #F0F0F0;
+        background-color: color(bg_white);
     }
     .iframe-mobile {
         height: 100%;
     }
     
 }
-
-@keyframes spin {
-    0% { rotate: 0deg; }
-    100% { rotate: 360deg; }
-}
-/* animation: spin 3s linear infinite alternate; */
-
-.spin{
-    animation-name: spin;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#bg { /* KEEP FOR LATE */
+    background: repeating-linear-gradient(296deg, 
+    red, red 10%,
+    black 10%, black 20%);
+    width: 1400px;
+    animation: ad_background 7s linear infinite;
 }
 .adwrapper {
     margin-top: 5px;
@@ -318,9 +317,12 @@ blockquote h2{
     box-shadow: inset 0 0 7.5px #000000;
     margin-bottom: 25em;
     overflow: hidden;
-    background: linear-gradient(296deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f, #ff0000);
+    background: repeating-linear-gradient(296deg, 
+    #ff0000, #ff0000 10%,
+    #ffff00 10%, #ffff00 20%);
+    /* background: linear-gradient(296deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ff7f, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff, #ff007f, #ff0000);
     background-size: 2600% 2600%;
-    animation: rainbow_B 15s ease infinite;
+    animation: rainbow_background 15s ease infinite;*/
     position: relative;
 
     .longboi {
@@ -331,6 +333,10 @@ blockquote h2{
         text-align: center;
         font-family: 'Dokdo', cursive;
 
+        span {
+            animation: rainbow_text 2s infinite 0s linear;
+        }
+
         p {
             padding: 0;
             margin: 0;
@@ -340,57 +346,243 @@ blockquote h2{
         }
 
         a {
-            background-color: #eeff00;
-            color: color(main);
+            background-color: color(adcolor);
+            border: color(adcolorsec) solid 3px;
+            color: color(adcolorsec);
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 18px;
             border-radius: 7px;
-            border: color(main) solid 3px;
             animation: adbutton 1s infinite 0s linear;
-        }
 
-        a:hover {
-            background-color: #00ffff;
-            border-color: #007fff;
-            color: #007fff;
-            font-size: 20px;
-            animation: adbutton_hover 1s infinite 0s linear
+            &:hover {
+                background-color: color(adhover);
+                border-color: color(adhoversec);
+                color: color(adhoversec);
+                font-size: 20px;
+                animation: adbutton_hover 1s infinite 0s linear
+            }
         }
     }
 }
+#container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 form {
-    border: color(main) solid 2px;
+    text-align: left;
+    border-style: solid;
+    border-color: color(main);
+    border-width: 0 2px;
     border-radius: 2px;
+    box-shadow: 0 9px 0px 0px color(bg_white), 0 -9px 0px 0px color(bg_white), 12px 0 15px -4px #05050542, -12px 0 15px -4px #05050542;
     margin: 15px 0 15px 0;
-    padding: 0 15px;
+    padding: 20px 30px;
     position: relative;
-    width: fit-content;
 
     legend {
         margin: 10px;
         font-size: 26.5px;
+        text-align: center;
     }
 
     label {
         margin-left: 0px;
-    }
-    
-    input {
-        border-radius: 2px;
-        border: color(main) solid 2px;
         margin-bottom: 10px;
-        position: relative;
+        display: flex;
+
+        text {
+            cursor: pointer;
+        }
+
+        input {
+            border-color: color(bg_white);
+            border-radius: 2px;
+            border-bottom: color(main) solid 2px;
+            border-style: solid;
+            background-color: color(bg_white);
+            position: relative;
+            flex: 1;
+            margin-left: 2px;
+    
+            &:focus{
+                outline: none;
+            }
+        }
+        .check {
+            .container {
+                display: block;
+                position: relative;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                margin-left: 5px;
+            }
+            
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: darken(color(bg_white), 4.5%);
+            }
+            
+            .container:hover input ~ .checkmark {
+                background-color: #e5e5e5;
+            }
+            
+            .container input:checked ~ .checkmark {
+                background-color: color(main);
+            }
+            
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+            
+            .container .checkmark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        .radio {
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            /* Hide the browser's default radio button */
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+            
+            /* Create a custom radio button */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: #eee;
+                border-radius: 50%;
+            }
+            
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+            
+            /* When the radio button is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+                background-color: #2196F3;
+            }
+            
+            /* Create the indicator (the dot/circle - hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            
+            /* Show the indicator (dot/circle) when checked */
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+            
+            /* Style the indicator (dot/circle) */
+            .container .checkmark:after {
+                top: 9px;
+                left: 9px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: white;
+            }
+        }
+    }
+    select {
+        color: color(third);
+        border: color(bg_white) hidden 2px;
+        background-color: color(bg_white);
+        margin-left: 2px;
+        cursor: pointer;
+
+        &:focus{
+            outline: none;
+        }
+
+        option {
+            color: color(main);
+            cursor: pointer;
+            border-color: color(main);
+            border-style: solid;
+            border-bottom: 2px;
+
+            &[value=""] {
+                display: none;
+            }
+        }
+    }
+    #submit_wrap {
+        text-align: center;
+        padding: 2px;
     }
 
     .submit {
-        border: #7f00ff solid 2px;
-        color: #ff7f00;
-        background-color: #00ffff;
+        border: color(main) solid 3px;
+        border-radius: 0;
+        color: #4c00ff;
+        background-color: color(bg_white);
         padding: 7px 38px 7px 38px;
+        animation: submit_in .3s 1 0s ease-out;
         cursor: pointer;
+        
+        &:hover {
+            animation: submit_out .3s 1 0s ease-out;
+            transform: scale(1.2);
+        }
+
+        &:focus{
+            outline: none;
+        }
     }
 }
 @keyframes howhedoit {
@@ -403,32 +595,44 @@ form {
     100%{background-position: 750px 0;}
 }
 @keyframes adbutton {
-    0%  {background: #eeff00; font-size: 20px;}
-    50% {background: #e7d321; font-size: 24px;}
-    100%{background: #eeff00; font-size: 20px;}
+    0%  {background: color(adcolor); font-size: 20px;}
+    50% {background: darken($color: color(adcolor), $amount: 10%); font-size: 24px;}
+    100%{background: color(adcolor); font-size: 20px;}
 }
 @keyframes adbutton_hover {
-    0%  {background-color: #00ffff; font-size: 20px;}
-    50% {background-color: #00ff00; font-size: 24px;}
-    100%{background-color: #00ffff; font-size: 20px;}
+    0%  {background-color: color(adhover); font-size: 20px;}
+    50% {background-color: darken($color: color(adhover), $amount: 10%); font-size: 24px;}
+    100%{background-color: color(adhover); font-size: 20px;}
 }
-@keyframes rainbow_A {
-    0%  {background-color: #ff0000;}
-    8%  {background-color: #ff7f00;}
-    16% {background-color: #ffff00;}
-    25% {background-color: #7fff00;}
-    33% {background-color: #00ff00;}
-    41% {background-color: #00ff7f;}
-    50% {background-color: #00ffff;}
-    58% {background-color: #007fff;}
-    66% {background-color: #0000ff;}
-    75% {background-color: #7f00ff;}
-    83% {background-color: #ff00ff;}
-    91% {background-color: #ff007f;}
-    100%{background-color: #ff0000;}
+@keyframes rainbow_text {
+    0%  {color: #ff0000;}
+    8%  {color: #ff7f00;}
+    16% {color: #ffff00;}
+    25% {color: #7fff00;}
+    33% {color: #00ff00;}
+    41% {color: #00ff7f;}
+    50% {color: #00ffff;}
+    58% {color: #007fff;}
+    66% {color: #0000ff;}
+    75% {color: #7f00ff;}
+    83% {color: #ff00ff;}
+    91% {color: #ff007f;}
+    100%{color: #ff0000;}
 }
-@keyframes rainbow_B {
+@keyframes rainbow_background {
     0%  {background-position:0% 51%}
     50% {background-position:100% 50%}
     100%{background-position:0% 51%}
+}
+@keyframes ad_background {
+    0%  {background-position: 0 0}
+    100%{background-position: -700px 0}
+}
+@keyframes submit_out {
+    0%  {transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
+@keyframes submit_in {
+    0%  {transform: scale(1.2);}
+    100%{transform: scale(1);}
 }

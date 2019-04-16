@@ -1,20 +1,53 @@
+<div id="container">
 <form>
-    <legend>Placeholder</legend>
+    <legend>Dingding's</legend>
     <label>
-        Nafn<br>
-        <input type="text" name="de text box" placeholder=""><br>
+        <text>Nafn</text><br>
+        <input name="nafn" type="text" name="de text box" placeholder="" required><br>
     </label>
     <label>
-        Símanúmer<br>
-        <input type="text"><br>
+        <text>Símanúmer</text><br>
+        <input name="símanúmer" type="text" required><br>
     </label>
     <label>
-        Tölvupóstur<br>
-        <input type="text"><br>
+        <text>Tölvupóstur</text><br>
+        <input name="tölvupóstur" type="text" required><br>
+    </label>
+    <label class="check">
+        <text>Gleraugu</text><br>
+        <div class="container">
+            <input type="checkbox" name="gleraugu" value="já" class="checkbox"><br>
+            <span class="checkmark"></span><br>
+        </div>
     </label>
     <label>
-        Dagsetning<br>
-        <input type="date" name="dagsetning"><br>
+        <text>Lítill</text><br>
+        <div class="container">
+            <input type="radio" name="stærð" value="lítill" checked><br>
+            <span class="checkmark"></span><br>
+        </div>
+        <text>Miðlungs</text><br>
+        <div class="container">
+            <input type="radio" name="stærð" value="miðlungs"><br>
+            <span class="checkmark"></span><br>
+        </div>
+        <text>Stór</text><br>
+        <div class="container">
+            <input type="radio" name="stærð" value="stór"><br>
+            <span class="checkmark"></span><br>
+        </div>
     </label>
-    <input type="submit" value="ay lmao" class="submit">
+    <label>
+        <text>Magn</text><br>
+        <select name="magn" required>
+            <option value="">Ekkert valið</option>
+            <option value="1">Einn</option>
+            <option value="2">Tveir</option>
+            <option value="3">Þrír</option>
+        </select>
+    </label>
+    <div id="submit_wrap">
+        <input name="panta" type="submit" value="Panta" class="submit">
+    </div>
 </form>
+</div>
