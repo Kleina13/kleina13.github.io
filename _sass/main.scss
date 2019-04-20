@@ -373,6 +373,7 @@ blockquote h2{
     width: 80%;
 }
 form {
+    
     text-align: left;
     border-style: solid;
     border-color: color(main);
@@ -387,6 +388,7 @@ form {
         margin: 10px;
         font-size: 26.5px;
         text-align: center;
+        font-family: 'Roboto', 'Questrial', sans-serif;
     }
 
     label {
@@ -566,12 +568,14 @@ form {
     }
 
     .submit {
+        font-family: 'Roboto', 'Questrial', sans-serif;
         border: color(main) solid 3px;
         border-radius: 0;
-        color: #4c00ff;
+        color: color(main);
         background-color: color(bg_white);
         padding: 7px 38px 7px 38px;
-        animation: submit_in .3s 1 0s ease-out;
+        animation: submit_in .3s 1 0s linear;
+        border-radius: 80px;
         cursor: pointer;
         
         &:hover {
@@ -634,4 +638,33 @@ form {
 @keyframes submit_in {
     0%  {transform: scale(1.2);}
     100%{transform: scale(1);}
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    main {
+        width: 100%;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
