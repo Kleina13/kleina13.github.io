@@ -3,15 +3,19 @@
     <legend>Dingding's</legend>
     <label>
         <text>Nafn</text><br>
-        <input name="nafn" type="text" name="de text box" placeholder="" required><br>
+        <input name="nafn" type="text" placeholder="Jón Jónsson" required><br>
     </label>
     <label>
-        <text>Símanúmer</text><br>
-        <input name="símanúmer" type="text" required><br>
+        <text>Hemilisfang</text><br>
+        <input name="heimilisfang" type="text" pattern="[a-zA-Z]{1,} [0-9]{1,}" placeholder="gata 'húsnúmer'"required><br>
+    </label>
+    <label>
+        <text>Póstnúmer</text><br>
+        <input name="póstnúmer" type="text" pattern="[0-9]{3}" placeholder="000" required><br>
     </label>
     <label>
         <text>Tölvupóstur</text><br>
-        <input name="tölvupóstur" type="text" required><br>
+        <input name="tölvupóstur" type="email"  placeholder="nafn@email.is" required><br>
     </label>
     <label class="check">
         <text>Gleraugu</text><br>
@@ -23,12 +27,12 @@
     <label>
         <text>Lítill</text><br>
         <div class="container">
-            <input type="radio" name="stærð" value="lítill" checked><br>
+            <input type="radio" name="stærð" value="lítill"><br>
             <span class="checkmark"></span><br>
         </div>
         <text>Miðlungs</text><br>
         <div class="container">
-            <input type="radio" name="stærð" value="miðlungs"><br>
+            <input type="radio" name="stærð" value="miðlungs" checked><br>
             <span class="checkmark"></span><br>
         </div>
         <text>Stór</text><br>
