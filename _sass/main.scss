@@ -577,6 +577,8 @@ form {
         animation: submit_in .3s 1 0s linear;
         border-radius: 80px;
         cursor: pointer;
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: visible;
         
         &:hover {
             animation: submit_out .3s 1 0s ease-out;
@@ -632,12 +634,12 @@ form {
     100%{background-position: -700px 0}
 }
 @keyframes submit_out {
-    0%  {transform: scale(1);}
-    100%{transform: scale(1.2);}
+    0%  {transform: scale(1) translateZ(0);}
+    100%{transform: scale(1.2) translateZ(0);}
 }
 @keyframes submit_in {
-    0%  {transform: scale(1.2);}
-    100%{transform: scale(1);}
+    0%  {transform: scale(1.2) translateZ(0);}
+    100%{transform: scale(1) translateZ(0);}
 }
 
 /* Extra small devices (phones, 600px and down) */
