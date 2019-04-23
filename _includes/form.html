@@ -3,19 +3,19 @@
     <legend>Dingding's</legend>
     <label>
         <text>Nafn</text><br>
-        <input name="nafn" type="text" placeholder="Jón Jónsson" required><br>
+        <input name="nafn" type="text" placeholder="Jón Jónsson" autocomplete="name" required><br>
     </label>
     <label>
         <text>Hemilisfang</text><br>
-        <input name="heimilisfang" type="text" pattern="[a-zA-Z]{1,} [0-9]{1,}" placeholder="gata 'húsnúmer'"required><br>
+        <input name="heimilisfang" type="text" pattern="[a-zA-Z]{1,} [0-9]{1,}" placeholder="gata 'húsnúmer'" autocomplete="street-address" required><br>
     </label>
     <label>
         <text>Póstnúmer</text><br>
-        <input name="póstnúmer" type="number" pattern="[0-9]{3}" placeholder="000" required><br>
+        <input name="póstnúmer" type="number" pattern="[0-9]{3}" placeholder="000" autocomplete="postal-code" required><br>
     </label>
     <label>
         <text>Tölvupóstur</text><br>
-        <input name="tölvupóstur" type="email"  placeholder="nafn@email.is" required><br>
+        <input name="tölvupóstur" type="email"  placeholder="nafn@email.is" autocomplete="email" required><br>
     </label>
     <label class="check">
         <text>Gleraugu</text><br>
